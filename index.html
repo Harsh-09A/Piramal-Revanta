@@ -709,6 +709,73 @@
           </div>
         </div>
       </section>
+
+      <!-- About Section -->
+      <section id="about_section" class="container-fluid p-4 mt-3">
+        <div class="container">
+          <div class="row about_bg pt-5 pb-5">
+            <div class="col-6">
+              <h6 class="sub-heading text-center fw-light">Connect with us</h6>
+              <h2 class="section-heading">Piramal Revanta</h2>
+
+              <!-- Form -->
+              <div class="enquire-section ps-5 pe-5">
+                <div class="container">
+                  <form id="contact-form" class="text-center">
+                    <div class="mb-3">
+                      <label for="user_name" class="form-label">Name</label>
+                      <input
+                        type="text"
+                        class="form-control inputStyle shadow-none"
+                        name="user_name"
+                        id="user_name"
+                        placeholder="Name"
+                        autocomplete="off"
+                        required />
+                    </div>
+                    <div class="mb-3">
+                      <label for="user_email" class="form-label"
+                        >Email address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control inputStyle shadow-none"
+                        name="user_email"
+                        id="user_email"
+                        placeholder="Email Address"
+                        autocomplete="off" />
+                    </div>
+                    <div class="mb-3">
+                      <label for="contact_number" class="form-label"
+                        >Phone Number</label
+                      >
+                      <input
+                        type="tel"
+                        class="form-control inputStyle shadow-none"
+                        id="contact_number"
+                        name="contact_number"
+                        pattern="[0-9]{10}"
+                        placeholder="Phone Number"
+                        oninvalid="setCustomValidity('Please enter a valid phone number. e.g., 12345-67890')"
+                        oninput="setCustomValidity('')"
+                        required />
+                    </div>
+
+                    <button
+                      type="submit"
+                      class="btn btn-primary submit-btn w-100">
+                      Submit
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="contact_details"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->

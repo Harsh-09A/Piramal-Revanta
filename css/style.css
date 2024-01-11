@@ -567,3 +567,27 @@ figure.fig_img.hover h3 {
     display: none;
   }
 }
+
+/* About */
+.about_bg {
+  /* border: 1px solid black; */
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 10);
+}
+
+.form-label {
+  display: none;
+}
+.inputStyle {
+  font-size: 1em;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.submit-btn,
+.submit-btn:hover,
+.submit-btn:focus-visible,
+.submit-btn:active {
+  background-color: var(--colorSecondary) !important;
+  border: none !important;
+}
