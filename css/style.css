@@ -78,13 +78,14 @@ html {
 /* All Sections */
 
 .section-heading {
-  font-size: 35px;
+  font-size: 2.3em;
   text-align: center;
   color: var(--colorPrimary);
   text-transform: uppercase;
   font-family: "Trajan_Pro_Bold";
 }
 .sub-heading {
+  font-size: 1.5em;
   color: var(--colorSecondary);
   font-family: "Trajan_Pro_Bold";
 }
@@ -129,4 +130,73 @@ html {
   .desktop-slider {
     display: none;
   }
+}
+
+/* Overview */
+.overview-para {
+  font-size: 1em;
+}
+@media screen and (max-width: 600px) {
+  .overview-para {
+    text-align: justify !important;
+  }
+}
+
+/* Highlights */
+.highlights li:before {
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: var(--colorPrimary);
+  position: absolute;
+  left: 16px;
+  top: 20px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.highlights li::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  width: 0;
+  background: var(--colorPrimary);
+  top: 0;
+  z-index: 1;
+  transition: ease all 0.5s;
+}
+
+.highlights li {
+  background: #eaeaea;
+  margin-bottom: 15px;
+  padding: 15px 10px 15px 30px;
+  position: relative;
+  list-style: none;
+}
+
+.highlights {
+  content: "";
+  padding-left: 0;
+}
+
+.highlights li:hover::after {
+  width: 100%;
+  transition: ease all 0.5s;
+}
+
+.highlights li:hover:before {
+  background: var(--colorWhite);
+  transition: ease all 0.5s;
+}
+
+.highlights li:hover {
+  color: var(--colorWhite);
+  transition: ease all 0.5s;
+}
+
+.highlights li span {
+  position: relative;
+  z-index: 2;
+  padding-left: 5px;
 }
