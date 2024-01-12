@@ -9,6 +9,11 @@
   src: url("../fonts/Trajan_Pro_Bold.ttf");
 }
 
+@font-face {
+  font-family: Futura_Bold_Font;
+  src: url("../fonts/Futura_Bold_Font.ttf");
+}
+
 :root,
 html {
   font-family: Roboto, sans-serif;
@@ -22,9 +27,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* #7f742e  #fd4a1f #ce9f54  #2e427f #b9867a  #CDBA88 #e2725b */
+
 :root {
-  --colorPrimary: #ed1d3d;
-  --colorSecondary: #253c6d;
+  --colorPrimary: #7f742e;
+  --colorSecondary: #8a453d;
+  --colorTertiary: #ce9f54;
   --colorWhite: #ffffff;
   --colorOffWhite: #f7f7f7;
   --colorBorderWhite: #dbe4e9;
@@ -92,7 +100,9 @@ html {
 .sub-heading {
   font-size: 1.5em;
   color: var(--colorSecondary);
-  font-family: "Trajan_Pro_Bold";
+  font-family: "sans-serif";
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 @media screen and (max-width: 600px) {
   .section-heading {
@@ -380,6 +390,9 @@ figure.fig_img.hover h3 {
 .nopadding {
   padding: 0;
 }
+.loc_title {
+  color: var(--colorSecondary);
+}
 
 @media screen and (max-width: 600px) {
   .locations-left {
@@ -552,7 +565,7 @@ figure.fig_img.hover h3 {
 
 .text_icon {
   margin-top: 8px;
-  color: var(--colorSecondary);
+  color: var(--colorPrimary);
   font-size: 13px;
 }
 
@@ -569,10 +582,26 @@ figure.fig_img.hover h3 {
 }
 
 /* About */
-.about_bg {
-  /* border: 1px solid black; */
-  border-radius: 15px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 10);
+#about_section {
+  background: url("../img/backgrounds/background1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 970px; */
+  background-attachment: fixed;
+  padding: 0 !important;
+}
+.about_overlay {
+  background: var(--colorBackgroundOverlay);
+  /* height: 970px; */
+  padding: 0;
+}
+#about_section .sub-heading {
+  color: var(--colorPrimary);
+  font-size: 1.5em;
+}
+
+#about_section .sub-heading {
+  letter-spacing: 3.5px;
 }
 
 .form-label {
@@ -590,4 +619,23 @@ figure.fig_img.hover h3 {
 .submit-btn:active {
   background-color: var(--colorSecondary) !important;
   border: none !important;
+}
+@media screen and (max-width: 600px) {
+  .enquire-section {
+    padding: 0 !important;
+  }
+  .about-para-container {
+    padding: 2em !important;
+    padding-top: 2em;
+  }
+}
+
+.read_more {
+  background-color: transparent;
+  font-size: 14px;
+  margin: 0;
+  border-radius: 0;
+  width: fit-content;
+  padding-left: 10px;
+  color: var(--colorWhite);
 }
